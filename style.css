@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: gilroy;
+}
+
+
+#main {
+  height: 100vh;
+  width: 100%;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+#nav1 {
+  height: 4vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5eba00;
+}
+
+#nav1 h2 {
+  font-size: 1vw;
+  color: #fff;
+  font-weight: 500;
+}
+
+#nav1 a {
+  color: #fff;
+}
+
+#nav1 i {
+  height: 1vh;
+  font-size: 1vw;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+#nav2 {
+  position: relative;
+  z-index: 999;
+  padding: 0.5vh 1vw;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nav2 #nav2-right {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav2 #nav2-right a {
+  margin: 10px;
+  color: #6e6e6e;
+  text-decoration: none;
+  white-space: nowrap;
+  display: block;
+}
+
+#nav2 #nav2-right a.active{
+  color: #ff922b;
+}
+
+#nav2 #nav2-right #nav2-btns button {
+  padding: 1vh 0.9vw;
+  background-color: transparent;
+  border: 0.1vw solid #fdad69;
+  border-radius: 0.4vh;
+  cursor: pointer;
+  position: relative;
+}
+
+#nav2 #nav2-right #nav2-btns .login {
+  background-color: #fff;
+  color: #ff922b;
+  font-size: 1vw;
+  font-weight: 500;
+  margin-right: 1vw;
+  transition: all ease-in-out 0.2s;
+}
+
+#nav2 #nav2-right #nav2-btns .signup {
+  background-color: #ff922b;
+  color: white;
+  font-size: 1vw;
+  font-weight: 500;
+}
+
+#center {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2vw;
+  padding: 0 8vw;
+}
+
+#center-left {
+  height: 100vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  gap: 4vh;
+}
+
+#center-left h1 {
+  font-weight: 600;
+  color: #354052;
+  font-size: 2.5vw;
+}
+
+#center-left h2 {
+  color: #6e7582;
+  font-size: 2vw;
+  font-weight: 600;
+}
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+#incNumber {
+  animation: counter 3s alternate ease-in-out forwards;
+  counter-reset: num var(--num);
+  color: #6e7582;
+  font-size: 2vw;
+  font-weight: 600;
+}
+
+#incNumber::after {
+  content: counter(num);
+}
+
+#center-left h4 {
+  color: #354052;
+  text-align: center;
+  font-size: 1.2vw;
+  font-weight: 600;
+}
+
+#center-left button {
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: #fff;
+  background-color: #ff922b;
+  padding: 1.7vh 5vw;
+  border-radius: 1vh;
+  border: none;
+  cursor: pointer;
+}
+
+#center-right {
+  height: 85vh;
+  width: 80vw;
+}
+
+#center-right img {
+  margin-top: -7vh;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  animation-name: move;
+  animation-timing-function: linear;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+#last-part {
+  position: relative;
+  bottom: 9vh;
+  height: 8vh;
+  width: 100%;
+  border: 0.1vw solid #c0e894;
+  padding: 2vh;
+  background-color: #dff1cc;
+}
+
+#last-part h1 {
+  color: #132500;
+  font-size: 1.7vw;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* hover part */
+
+#nav2 #nav2-right #nav2-btns .login:hover {
+  background-color: #ff922b;
+  color: white;
+}
+
+#center-left button:hover {
+  color: #fff;
+  background-color: #f8871d;
+}
+
+#nav2 #nav2-right a:hover {
+  color: #ff922b;
+}
+
+/* animation */
+@keyframes move {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5%);
+  }
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+
+  to {
+    --num: 5000;
+  }
+}
+
+/* responsive part */
+@media only screen and (max-width: 768px) {
+  #nav1 h2 {
+    font-size: 3vw;
+  }
+
+  #nav1 i {
+    font-size: 3vw;
+  }
+
+  #nav2 #nav2-right a{
+    display: none;
+  }
+
+  #nav2 #nav2-left img{
+    height: 6vh;
+    width: 60vw;
+  }
+
+  #center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #center-right {
+    margin-top: 40vh;
+    margin-bottom: 2vh;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  #center-right img {
+    margin-top: 2vh;
+  }
+
+  #center-left {
+    text-align: center;
+    gap: 3vh;
+    width: 90vw;
+    text-align: center;
+  }
+
+  #center-left h1 {
+    font-size: 11vw;
+  }
+git 
+  #center-left h2 {
+    font-size: 10vw;
+  }
+
+  #incNumber {
+    font-size: 10vw;
+  }
+
+  #center-left button {
+    font-size: 5vw;
+    padding: 1.7vh 5vw;
+  }
+
+  #center-left h4 {
+    font-size: 4vw;
+  }
+
+  #last-part {
+    position: absolute;
+    margin-bottom: -110%;
+  }
+
+  #last-part h1 {
+    color: #132500;
+    font-size: 4vw;
+  }
+
+  #nav2 #nav2-right #nav2-btns button {
+    margin-bottom: 2vh;
+  }
+  
+  #nav2 #nav2-right #nav2-btns .login {
+    font-size: 3vw;
+  }
+  
+  #nav2 #nav2-right #nav2-btns .signup {
+    font-size: 3vw;
+  }
+}
+
+
+ 
+
