@@ -33,21 +33,9 @@ gsap.from(["#center-right img"], {
     x: 60
 })
 
-gsap.from("footer", {
+gsap.from("#last-part", {
     opacity: 0,
     duration:  1,
     delay: 0.4,
     y: 60
 })
-
-
-function myFunction() {
-    var x = document.querySelector("#nav2 #nav2-right   ");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
-
-  myFunction()

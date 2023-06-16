@@ -289,7 +289,7 @@ body {
   #center-left h1 {
     font-size: 11vw;
   }
-
+git 
   #center-left h2 {
     font-size: 10vw;
   }
@@ -309,7 +309,7 @@ body {
 
   #last-part {
     position: absolute;
-    bottom: -55%;
+    margin-bottom: -110%;
   }
 
   #last-part h1 {
