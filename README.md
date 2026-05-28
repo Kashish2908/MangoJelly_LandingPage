@@ -27,7 +27,7 @@ A responsive and animated landing page inspired by the official MangoJelly websi
 
 ## 🌐 Live Demo
 
-:contentReference[oaicite:0]{index=0}
+[Visit Live Site](https://kashish2908.github.io/MangoJelly_LandingPage/)
 
 ---
 
