@@ -10,59 +10,79 @@
 </head>
 
 <body>
-    <div id="main">
-        <div id="nav1">
-            <h2>Meet other creators at the new <a href="">Community</a>! <i class="ri-close-line"></i></h2>
-        </div>
-        <div id="nav2">
+     <!-- NAV 1 -->
+  <div id="nav1">
+    <h2>Meet other creators at the new <a href="">Community</a>!</h2>
+    <button class="close-btn" onclick="this.parentElement.style.display='none'" aria-label="Close">
+      <i class="ri-close-line"></i>
+    </button>
+  </div>
 
-            <div id="nav2-left">
-                <img src="https://themangojelly.com/images/the-mango-jelly-logo-text.svg" alt="logo">
-            </div>
-            <div id="nav2-right">
-                <a class="active" href="">For creators</a>
-                <a href="">For Brands</a>
-                <a href="">Creator Profile</a>
-                <a href="">Founding Creators</a>
-                <a href="">Creator Spotlight</a>
-                <a href="">NFTs</a>
-                <a href="">Blog</a>
-                <a href="">हिंदी</a>
-                <div id="nav2-btns">
-                    <button class="login">Login</button>
-                    <button class="signup">Sign Up</button>
-                </div>
-            </div>
-
-
-        </div>
-
-        <div id="center">
-            <div id="center-right">
-                <img src="https://themangojelly.com/images/hero-creativity.svg" alt="">
-            </div>
-            <div id="center-left">
-                <h1>Helping creators build the future <br> of financial freedom</h1>
-                <h2>Join a global community of <br> <span id="incNumber"></span>+ creators 🙌</h2>
-
-                <button>Become a Founding Creator!</button>
-
-                <h4>
-                    No prior experience required. Always free. ❤️
-                </h4>
-            </div>
-        </div>
-
-        <div id="last-part">
-            <h1>You are more creative than you believe.</h1>
-
-        </div>
-       
+  <!-- NAV 2 -->
+  <div id="nav2">
+    <div id="nav2-left">
+      <img src="logo-light.svg" alt="Mango Jelly Logo" onerror="this.style.display='none'">
     </div>
+    <div id="nav2-right">
+      <div id="nav-links">
+        <a class="active" href="">For Creators</a>
+        <a href="">For Brands</a>
+        <a href="">Creator Profile</a>
+        <a href="">Founding Creators</a>
+        <a href="">Creator Spotlight</a>
+        <a href="">NFTs</a>
+        <a href="">Blog</a>
+        <a href="">हिंदी</a>
+      </div>
+      <div id="nav2-btns">
+        <button class="login">Login</button>
+        <button class="signup">Sign Up</button>
+      </div>
+      <button id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+        <i class="ri-menu-line"></i>
+      </button>
+    </div>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"
-        integrity="sha512-gsEItzcNkWxfxHjr4BaEZAd9YuRWYjxnj7c/yukcZ0/nWehUb5TjJNyyv1ApCU2DFH/qgw+stFZHPOKnoQnIuQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu">
+    <a class="active" href="">For Creators</a>
+    <a href="">For Brands</a>
+    <a href="">Creator Profile</a>
+    <a href="">Founding Creators</a>
+    <a href="">Creator Spotlight</a>
+    <a href="">NFTs</a>
+    <a href="">Blog</a>
+    <a href="">हिंदी</a>
+    <div id="mobile-menu-btns">
+      <button class="login">Login</button>
+      <button class="signup">Sign Up</button>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div id="center">
+    <div id="center-right">
+      <img src="1-carousel-efficiency.min.svg" alt="Creator illustration"
+           onerror="this.src='https://via.placeholder.com/500x400?text=Illustration'">
+    </div>
+    <div id="center-left">
+      <h1>Helping creators build the future of financial freedom</h1>
+      <h2>Join a global community of <span id="incNumber"></span>+ creators 🙌</h2>
+      <button>Become a Founding Creator!</button>
+      <h4>No prior experience required. Always free. ❤️</h4>
+    </div>
+  </div>
+
+  <!-- FOOTER BANNER -->
+  <div id="last-part">
+    <h1>You are more creative than you believe.</h1>
+  </div>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"
+    integrity="sha512-gsEItzcNkWxfxHjr4BaEZAd9YuRWYjxnj7c/yukcZ0/nWehUb5TjJNyyv1ApCU2DFH/qgw+stFZHPOKnoQnIuQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
 
